@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import "../Components/styles.css";
+import ExtraSection2 from "../Components/ExtraSection2";
 
 
 const Home = () => {
@@ -51,6 +52,7 @@ const Home = () => {
 
                 </Swiper>
             </div>
+            <ExtraSection2></ExtraSection2>
 
         </div>
     );
