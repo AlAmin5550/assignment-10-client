@@ -18,7 +18,7 @@ const AddSpots = () => {
         const user_name = form.name.value;
         const details = {image,tourist_spot_name,country_name,location,short_description,average_cost,seasonality,travel_time,totalVisitorsPerYear,user_email,user_name};
         console.log(details);
-        fetch('http://localhost:5000/touristSpots',{
+        fetch(' https://voyage-vista-server-nu.vercel.app/touristSpots',{
             method:"POST",
             headers:{
                 'content-type': 'application/json'

@@ -21,7 +21,7 @@ const UpdateSpot = () => {
         const user_email = form.email.value;
         const user_name = form.name.value;
         const details = {image,tourist_spot_name,country_name,location,short_description,average_cost,seasonality,travel_time,totalVisitorsPerYear,user_email,user_name};
-        fetch(`http://localhost:5000/touristSpots/${_id}`,{
+        fetch(` https://voyage-vista-server-nu.vercel.app/touristSpots/${_id}`,{
             method:'PUT',
             headers:{
                 'content-type': 'application/json'

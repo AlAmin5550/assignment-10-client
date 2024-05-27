@@ -31,7 +31,7 @@ const MyList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/touristSpots/${_id}`, {
+                fetch(`https://voyage-vista-server-nu.vercel.app/touristSpots/${_id}`, {
                     method: "DELETE",
                 })
                     .then(res => res.json())
@@ -53,7 +53,7 @@ const MyList = () => {
         });
     }
     const handleUpdate = _id => {
-        navigate(`/updateCoffee/${_id}`)
+        navigate(`/updateSpot/${_id}`)
         
     }
     return (

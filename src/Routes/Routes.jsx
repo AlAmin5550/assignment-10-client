@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch('http://localhost:5000/touristSpots'),
+        loader: () => fetch('https://voyage-vista-server-nu.vercel.app/touristSpots'),
         element: <Home></Home>
       },
       {
@@ -35,28 +35,28 @@ const router = createBrowserRouter([
       },
       {
         path: "/allSpots",
-        loader: () => fetch('http://localhost:5000/touristSpots'),
+        loader: () => fetch('https://voyage-vista-server-nu.vercel.app/touristSpots'),
         element: <AllTouristSpots></AllTouristSpots>,
       },
       {
         path: "/allSpots/spotsDetails/:id",
         element: <TouristSpotsDetails></TouristSpotsDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/touristSpots/${params.id}`)
+        loader: ({ params }) => fetch(`https://voyage-vista-server-nu.vercel.app/touristSpots/${params.id}`)
       },
       {
         path: "/spotsDetails/:id",
         element: <TouristSpotsDetails></TouristSpotsDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/touristSpots/${params.id}`)
+        loader: ({ params }) => fetch(`https://voyage-vista-server-nu.vercel.app/touristSpots/${params.id}`)
       },
       {
         path:"/countrySpots/:name",
-        loader: () => fetch('http://localhost:5000/touristSpots'),
+        loader: () => fetch(`https://voyage-vista-server-nu.vercel.app/touristSpots`),
         element:<CountriesSpots></CountriesSpots>
       },
       {
         path: "/countrySpots/:name/spotsDetails/:id",
         element: <TouristSpotsDetails></TouristSpotsDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/touristSpots/${params.id}`)
+        loader: ({ params }) => fetch(`https://voyage-vista-server-nu.vercel.app/touristSpots/${params.id}`)
       },
       {
         path:"/addSpots",
@@ -65,12 +65,12 @@ const router = createBrowserRouter([
       {
         path:"/myList",
         element:<PrivateRoute><MyList></MyList></PrivateRoute> ,
-        loader: () => fetch('http://localhost:5000/touristSpots'),
+        loader: () => fetch('https://voyage-vista-server-nu.vercel.app/touristSpots'),
       },
       {
-        path:"/updateCoffee/:id",
+        path:"/updateSpot/:id",
         element:<PrivateRoute><UpdateSpot></UpdateSpot></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/touristSpots/${params.id}`)
+        loader: ({ params }) => fetch(`https://voyage-vista-server-nu.vercel.app/touristSpots/${params.id}`)
       }
 
     ],
