@@ -21,7 +21,7 @@ const UpdateSpot = () => {
         const user_email = form.email.value;
         const user_name = form.name.value;
         const details = {image,tourist_spot_name,country_name,location,short_description,average_cost,seasonality,travel_time,totalVisitorsPerYear,user_email,user_name};
-        fetch(` https://voyage-vista-server-nu.vercel.app/touristSpots/${_id}`,{
+        fetch(`https://voyage-vista-server-nu.vercel.app/touristSpots/${_id}`,{
             method:'PUT',
             headers:{
                 'content-type': 'application/json'
@@ -33,7 +33,7 @@ const UpdateSpot = () => {
             console.log(data);
             if(data.modifiedCount>0){
                 toast.success('Updated Successfully');
-                navigate('/myList')
+                navigate(`/allSpots/spotsDetails/${_id}`)
             }
         })
     }

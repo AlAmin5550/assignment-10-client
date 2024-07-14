@@ -1,5 +1,5 @@
-import { useContext} from "react";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useContext, useEffect, useState} from "react";
+import {   useNavigate } from "react-router-dom";
 import { AuthContext } from "../Routes/AuthProvider";
 import { IoMdTime } from "react-icons/io";
 import { SlCalender } from "react-icons/sl";
@@ -9,16 +9,18 @@ import Swal from "sweetalert2";
 
 
 const MyList = () => {
-    const allSpots = useLoaderData();
+    const [spots,setSpots] = useState();
     const navigate = useNavigate();
     const { user , loading } = useContext(AuthContext);
+    const email = user.email;
+    useEffect(()=>{
+        fetch(`https://voyage-vista-server-nu.vercel.app/mySpots?email=${email}`)
+        .then(res=> res.json())
+        .then(data=> setSpots(data))
+    },[email])
     if(loading){
         return  <span className="loading loading-spinner loading-lg items-center"></span>;
     }
-    
-    const name = user.displayName;
-    const email = user.email;
-    const spots = allSpots.filter(spot => spot.user_name == name || spot.user_email == email);
     const handleDelete = _id => {
         Swal.fire({
             title: "Are you sure?",
@@ -45,8 +47,6 @@ const MyList = () => {
                             });
                             // reload
                             window.location.reload(false)
-                
-
                         }
                     })
             }
@@ -83,8 +83,8 @@ const MyList = () => {
                                         <p>{spot.totalVisitorsPerYear} visitors per year</p>
                                     </div>
                                 </div>
-                                <div className=" ">
-                                    <button onClick={() => handleDelete(spot._id)} className="btn btn-outline btn-error btn-sm mr-5">
+                                <div className="space-x-3">
+                                    <button onClick={() => handleDelete(spot._id)} className="btn btn-outline btn-error btn-sm">
                                         Delete
 
                                     </button>

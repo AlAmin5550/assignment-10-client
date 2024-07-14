@@ -65,7 +65,6 @@ const router = createBrowserRouter([
       {
         path:"/myList",
         element:<PrivateRoute><MyList></MyList></PrivateRoute> ,
-        loader: () => fetch('https://voyage-vista-server-nu.vercel.app/touristSpots'),
       },
       {
         path:"/updateSpot/:id",

@@ -9,23 +9,23 @@ const ExtraSection1 = () => {
             </div>
             <div className="flex flex-col container mx-auto md:flex-row justify-center gap-8">
                 <div className="w-36 h-40 bg-white">
-                    <img src="https://i.ibb.co/2Nhyx7h/Trip-Advisor-Icon.png" alt="Trip-Advisor-Icon" className="object-cover object-center  rounded-t-md  "></img>
+                    <img src="https://i.ibb.co/qnqjc9s/Trip-Advisor-Logo-wine.png" alt="Trip-Advisor-Icon" className="object-cover object-center  rounded-t-md  "></img>
                     <h1 className="text-sm text-gray-300">Trip Advisor</h1>
 
                 </div>
                 <div className="w-36 h-40 bg-white">
-                    <img src="https://i.ibb.co/G58nzsc/Airbnb.jpg" alt="Trip-Advisor-Icon" className="object-cover object-center  rounded-t-md  "></img>
+                    <img src="https://i.ibb.co/jbJ7dLt/Airbnb-Logo-wine.png" alt="Trip-Advisor-Icon" className="object-cover object-center  rounded-t-md  "></img>
                     <h1 className="text-sm text-gray-300">Airbnb</h1>
 
                 </div>
 
                 <div className="w-36 h-40 bg-white">
-                    <img src="https://i.ibb.co/r7kkLRX/Ryanair.png" alt="Trip-Advisor-Icon" className="object-cover object-center  rounded-t-md  "></img>
+                    <img src="https://i.ibb.co/pw2mHdS/Raya-Airways-Logo-wine.png" alt="Trip-Advisor-Icon" className="object-cover object-center  rounded-t-md  "></img>
                     <h1 className="text-sm text-gray-300">Ryan Air</h1>
 
                 </div>
                 <div className="w-36 h-40 bg-white">
-                    <img src="https://i.ibb.co/1Rx3J0T/Vrbo.png" alt="Trip-Advisor-Icon" className="object-cover object-center  rounded-t-md  "></img>
+                    <img src="https://i.ibb.co/kJHgsDr/Vrbo-1.png" alt="Trip-Advisor-Icon" className="object-cover object-center  rounded-t-md  "></img>
                     <h1 className="text-sm text-gray-300">Vrbo</h1>
 
                 </div>

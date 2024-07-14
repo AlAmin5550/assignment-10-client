@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { AuthContext } from "../Routes/AuthProvider";
 
 
 const AddSpots = () => {
+    const {user} = useContext(AuthContext);
     const handleSubmit = e => {
         e.preventDefault();
         const form = e.target;
@@ -45,11 +48,11 @@ const AddSpots = () => {
                         <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                             <div className="col-span-full sm:col-span-3">
                                 <label htmlFor="name" className="text-sm">Name</label>
-                                <input id="name" type="text" placeholder="Name" name="name" className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 focus:ring-default-600 border-gray-300"  />
+                                <input id="name" defaultValue={user.displayName} type="text" placeholder="Name" name="name" className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 focus:ring-default-600 border-gray-300"  />
                             </div>
                             <div className="col-span-full sm:col-span-3">
                                 <label htmlFor="email" className="text-sm">Email</label>
-                                <input id="email" type="email" placeholder="Email" name="email" className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 focus:ring-default-600 border-gray-300"  />
+                                <input id="email" type="email" placeholder="Email" defaultValue={user.email} name="email" className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 focus:ring-default-600 border-gray-300"  />
                             </div>
                             <div className="col-span-full">
                                 <label htmlFor="address" className="text-sm">Tourist Spot Name</label>
